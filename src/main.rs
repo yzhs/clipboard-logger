@@ -2,8 +2,6 @@
 extern crate alloc_system;
 extern crate clipboard;
 
-use std::io::{self, Write};
-
 use alloc_system::System;
 use clipboard::{ClipboardContext, ClipboardProvider};
 
@@ -23,15 +21,12 @@ fn main() {
     ];
     let mut num_previous = 0;
 
-    let mut stdout = io::stdout();
-
     loop {
         if let Ok(content) = ctx.get_contents() {
             if !last_contents.contains(&content) {
                 let index = num_previous % last_contents.len();
                 last_contents[index] = content.to_string();
-                let _ = stdout.write(content.as_bytes());
-                let _ = stdout.write(b"\n");
+                println!("{}", content);
             }
             num_previous += 1;
         }
