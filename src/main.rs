@@ -31,6 +31,7 @@ fn main() {
                 let index = num_previous % last_contents.len();
                 last_contents[index] = content.to_string();
                 let _ = stdout.write(content.as_bytes());
+                let _ = stdout.write(b"\n");
             }
             num_previous += 1;
         }
