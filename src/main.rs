@@ -1,12 +1,5 @@
-#![feature(alloc_system, global_allocator, allocator_api)]
-extern crate alloc_system;
 extern crate clipboard;
-
-use alloc_system::System;
 use clipboard::{ClipboardContext, ClipboardProvider};
-
-#[global_allocator]
-static A: System = System;
 
 fn main() {
     let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
