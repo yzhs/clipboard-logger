@@ -4,7 +4,7 @@ name = "clipboard-logger"
 version = "0.1.0"
 
 [dependencies]
-copypasta = { version = "0.7.1", features = [ "x11" ], default-features = false }
+copypasta = { version = "0.8.1", features = [ "x11" ], default-features = false }
 
 [profile.release]
 lto = true
