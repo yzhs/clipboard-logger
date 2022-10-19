@@ -1,8 +1,8 @@
-extern crate clipboard;
-use clipboard::{ClipboardContext, ClipboardProvider};
+extern crate copypasta;
+use copypasta::{ClipboardContext, ClipboardProvider};
 
 fn main() {
-    let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
+    let mut ctx = ClipboardContext::new().unwrap();
 
     let empty_string = "".to_string();
     let mut last_contents = [
