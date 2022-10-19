@@ -1,4 +1,3 @@
-extern crate copypasta;
 use copypasta::{ClipboardContext, ClipboardProvider};
 
 fn main() {
